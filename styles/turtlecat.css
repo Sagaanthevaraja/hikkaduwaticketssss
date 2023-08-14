@@ -1,0 +1,154 @@
+#menu{
+  display: none;
+}
+label{
+
+  display: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: serif;
+}
+.logo{
+  width: 5em;
+  height: 5em;
+}
+.mainnav{
+  position: relative;
+  float: right;
+}
+header{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #86c0dd, whitesmoke);
+  box-shadow: 0 5px 10px rgba(31, 8, 107, 0.1);
+  padding: 5px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  
+}
+header .mainnav ul{
+  list-style: none;
+}
+header .mainnav ul li{
+position: relative;
+float: left;
+font-family: candara;
+font-weight: bold;
+}
+header .mainnav ul li a{
+padding: 1em;
+font-size: 1em;
+color: #000;
+display: block;
+text-decoration: none;
+font-family: cursive;
+}
+.mainnav ul li ul{
+  position: absolute;
+  left: 0;
+  width: 150px;
+  display: none;
+  background: #86c0dd;
+}
+.mainnav ul li ul li{
+  width: 100%;
+}
+header .mainnav ul li:focus-within > ul,
+header .mainnav ul li:hover > ul{
+  display: initial;
+  background: whitesmoke;
+}
+header .mainnav ul li a:hover{
+  background-color: whitesmoke;
+  color: rgb(5, 5, 5);
+}
+footer{
+  background-color:  #86c0dd;
+  width: 100%;
+  color: black;
+  margin-top: 0.5em;
+  
+}
+.navfo{
+  display: flex;
+  justify-content: space-between;
+}
+.navfo ul{
+  display: block;
+  list-style: none;
+}
+   @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  main
+  {
+    animation: fadeIn 2s ease-in-out;
+    background-color:  #86c0dd;
+    padding-bottom: 3%;
+    background: linear-gradient(to right, whitesmoke, #86c0dd);
+  }
+  main h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0.8em;
+    font-size: 1.8em;
+  }
+  main p{
+    text-align: center;
+    margin: 0.5em;
+    padding-left: 0.8em;
+    font-size: 1.2em;
+  }
+main  h2{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0.8em;
+  font-size: 1.6em;
+}
+main li{
+  text-align: center;
+    margin: 0.5em;
+    padding-left: 0.8em;
+    font-size: 1.2em;
+    justify-items: left;
+}
+table img{
+  width: 500;
+  margin: 1.5em;
+}
+tr{
+  max-width: fit-content;
+  background-color: rgb(233, 230, 227);
+  text-align: center;
+}
+th, td{
+  font-size: 1.1em;
+  font-family: cursive;
+  
+}
+
+table{
+  margin: 3%;
+  position: relative;
+  
+}
+video{
+  width: 100%;
+  height: 45px;
+}

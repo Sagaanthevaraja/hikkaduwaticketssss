@@ -1,0 +1,160 @@
+#menu{
+  display: none;
+}
+label{
+
+  display: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: serif;
+}
+.logo{
+  width: 5em;
+  height: 5em;
+}
+.mainnav{
+  position: relative;
+  float: right;
+}
+header{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #86c0dd, whitesmoke);
+  box-shadow: 0 5px 10px rgba(31, 8, 107, 0.1);
+  padding: 5px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  
+}
+header .mainnav ul{
+  list-style: none;
+}
+header .mainnav ul li{
+position: relative;
+float: left;
+font-family: candara;
+font-weight: bold;
+}
+header .mainnav ul li a{
+padding: 1em;
+font-size: 1em;
+color: #000;
+display: block;
+text-decoration: none;
+font-family: cursive;
+}
+.mainnav ul li ul{
+  position: absolute;
+  left: 0;
+  width: 150px;
+  display: none;
+  background: #86c0dd;
+}
+.mainnav ul li ul li{
+  width: 100%;
+}
+header .mainnav ul li:focus-within > ul,
+header .mainnav ul li:hover > ul{
+  display: initial;
+  background: whitesmoke;
+}
+header .mainnav ul li a:hover{
+  background-color: whitesmoke;
+  color: rgb(5, 5, 5);
+}
+footer{
+  background-color:  #86c0dd;
+  width: 100%;
+  color: black;
+  margin-top: 0.5em;
+  
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  main
+  {
+    animation: fadeIn 2s ease-in-out;
+  }
+  .maintxt{
+    text-align: center;
+    background-color: peachpuff;
+    margin: 2.5em;
+  }
+.maintxt h2{
+  font-size: 1.8em;
+  margin: 2em;
+}
+.maintxt p{
+  
+  margin-left: 2em;
+  margin-right: 2em;
+  font-size: 1.3em;
+}
+.maintxt h3{
+ margin-top: 1.2em;
+ font-size: 1.8em;
+
+}
+ ol{
+list-style-type: decimal;
+margin-right: 41% ;
+padding-left: 45%;
+text-align: left;
+margin-top: 1.2em;
+font-size: 1.3em;
+margin-bottom: 1.3em;
+}
+.section{
+  margin: 2.5em;
+  padding: 2em;
+  background-color: peachpuff;
+}
+.section img{
+  float: left;
+  width: 25%;
+  height: 300px;
+  margin-right: 1.3em;
+}
+.section p{
+  font-size: 1.1em;
+  padding-top: 1.6em;
+  
+}
+.button{
+  background-color: skyblue;
+  border: 2px solid #8fd7c7;
+  color: black;
+  font-family: cursive;
+  padding: 3px 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+video{
+  width: 100%;
+  height: auto;
+}
+div{
+  background: linear-gradient(to right, whitesmoke, #86c0dd);
+}

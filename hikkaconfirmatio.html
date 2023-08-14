@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/mob.css">
+    <link rel="stylesheet" type="text/css" href="Common.css">
+    <style>
+        /* Center the form on the page */
+        form {
+            display: inline-block;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+            color: rgb(19, 18, 18);
+        }
+        p{
+            color: rgb(10, 10, 10);
+        }
+        p i{
+            color: rgb(24, 22, 22);
+        }
+        tr{
+            border: 1px solid black;
+        }
+        th{
+            color: rgb(28, 27, 27);
+        }
+    /* Add custom CSS here to style the layout */
+    .flex-container {
+        display: cover;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+    .details-field {
+        width: 100%; /* Adjust the width as needed */
+        margin-bottom: 20px; /* Add spacing between fields */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+        /* Add responsive styling here if needed */
+    }
+    main
+{
+  animation: fadeIn 2s ease-in-out;
+}
+.mainimg{
+width: 100%;
+height: 45%;
+margin: 0;
+}
+main{
+margin: 2em;
+background: linear-gradient(to right, whitesmoke, #86c0dd);
+
+}
+main p{
+text-align: center;
+padding: 1em;
+font-size: 1.1em;
+}
+main h2{
+text-align: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 1.3em;
+}
+iframe{
+height: 500px;
+width: 95%;
+margin-left: 2em;
+margin-right: 2em;
+margin-bottom: 1.2em;
+justify-content: center;
+}
+body{
+font-family: serif;
+}
+.logo{
+width: 5em;
+height: 5em;
+}
+.mainnav{
+position: relative;
+float: right;
+}
+header{
+position: relative;
+top: 0;
+left: 0;
+right: 0;
+background: linear-gradient(to right, #86c0dd, whitesmoke);
+box-shadow: 0 5px 10px rgba(31, 8, 107, 0.1);
+padding: 5px 2%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+z-index: 1000;
+
+}
+header .mainnav ul{
+list-style: none;
+}
+header .mainnav ul li{
+position: relative;
+float: left;
+font-family: candara;
+font-weight: bold;
+}
+header .mainnav ul li a{
+padding: 1em;
+font-size: 1em;
+color: #000;
+display: block;
+text-decoration: none;
+font-family: cursive;
+}
+.mainnav ul li ul{
+position: absolute;
+left: 0;
+width: 150px;
+display: none;
+background: #86c0dd;
+}
+.mainnav ul li ul li{
+width: 100%;
+}
+header .mainnav ul li:focus-within > ul,
+header .mainnav ul li:hover > ul{
+display: initial;
+background: whitesmoke;
+}
+header .mainnav ul li a:hover{
+background-color: whitesmoke;
+color: rgb(5, 5, 5);
+}
+footer{
+background-color:  #86c0dd;
+width: 100%;
+color: black;
+margin-top: 0.5em;
+
+}
+    </style>
+    <title>Confirmation Page</title>
+</head>
+<body>
+  <form>
+   <center><h2>YOUR ORDER HAS BEEN CONFIRMED!!!</h2></center>
+    <br>
+    <p><i>
+        Thank you for your order. Your order has been confirmed with us. You can show this confirmation at the entrance. Following is the summary of your order.</i></p>
+    <br>
+    <main>
+    <form>
+        <table  id="summary-table">
+            <tr>
+                <td>Name</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>SL Adult</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>SL Child</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Foreigner Adult</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Foreigner Child</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Infant</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total Payable</td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</main>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+function updateSummaryTable() {
+
+    const fullName = localStorage.getItem("fullName");
+    const mobNum = localStorage.getItem("mobNum");
+    const email = localStorage.getItem("Email");
+const date = localStorage.getItem("date");
+const duration = localStorage.getItem("duration");
+const foreignerAdultCount = localStorage.getItem("foreignerAdultCount");
+const foreignerChildCount = localStorage.getItem("foreignerChildCount");
+const slAdultCount = localStorage.getItem("slAdultCount");
+const slChildCount = localStorage.getItem("slChildCount");
+const infantCount = localStorage.getItem("infantCount");
+const totalPayable = localStorage.getItem("totalPayable");
+
+    const cells = document.getElementById('summary-table').querySelectorAll('td');
+    cells[1].textContent = fullName;
+cells[3].textContent = date;
+cells[5].textContent = duration;
+cells[7].textContent = mobNum;
+cells[9].textContent = email;
+cells[11].textContent = slAdultCount; // Correct index for SL Adult
+cells[13].textContent = slChildCount; // Correct index for SL Child
+cells[15].textContent = foreignerAdultCount; // Correct index for Foreigner Adult
+cells[17].textContent = foreignerChildCount; // Correct index for Foreigner Child
+cells[19].textContent = infantCount; // Correct index for Infant
+ cells[21].textContent = `${totalPayable} USD`;
+
+
+}
+
+updateSummaryTable();
+    });
+</script>
+</html>

@@ -1,0 +1,76 @@
+@media (max-width: 700px) {
+    
+    header{
+        padding: 20px;
+    }
+    header label {
+        display: initial;
+        position: relative;
+    }
+    header .mainnav{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+
+        background:#86c0dd;
+        border-top: 1px solid black;
+        display: none;
+    }
+    Header .mainnav ul li{
+        width: 100%;
+    }
+    header .mainnav ul li ul{
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    header .mainnav ul li ul li{
+        background: #86c0dd;
+    }
+    header #menu:checked ~ .mainnav{
+        display: initial;
+    }
+    .cont{
+        display: block;
+    }
+    .Ts{
+        widows: 0;
+        margin: 0;
+        padding: 0;
+    }
+    table{
+        margin: 0;
+        padding: 0;
+    }
+    table img{
+        width: 150px;
+        margin: 0;
+        padding: 0;
+    }
+    th,td{
+        font-size: 0.8em;
+    }
+    iframe{
+        margin: 0;
+        padding: 15px;
+    }
+    .section img{
+        float: none;
+        width: 100%;
+    }
+    .maincon img{
+        float: none;
+        width: 100%;
+        margin: 0;
+        
+    }
+    .maincont img{
+        float: none;
+        width: 100%;
+        margin: 0;
+        
+    }
+    form{
+        margin: 0;
+    }
+
+}

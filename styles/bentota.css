@@ -1,0 +1,129 @@
+#menu{
+  display: none;
+}
+label{
+
+  display: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: serif;
+}
+.logo{
+  width: 5em;
+  height: 5em;
+}
+.mainnav{
+  position: relative;
+  float: right;
+}
+header{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #069ae3,;
+  background-image: url("https://cdn.pixabay.com/photo/2013/09/23/22/33/turtle-185484_1280.jpg") ;
+  box-shadow: 0 5px 10px rgba(31, 8, 107, 0.1);
+  padding: 5px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  
+}
+header .mainnav ul{
+  list-style: none;
+}
+header .mainnav ul li{
+position: relative;
+float: left;
+font-family: candara;
+font-weight: bold;
+}
+header .mainnav ul li a{
+padding: 1em;
+font-size: 1em;
+color:white; 
+display: block;
+text-decoration: none;
+font-family: cursive;
+}
+.mainnav ul li ul{
+  position: absolute;
+  left: 0;
+  width: 150px;
+  display: none;
+  background:whitesmoke;
+  background-image: url("https://cdn.pixabay.com/photo/2013/09/23/22/33/turtle-185484_1280.jpg") ;
+}
+.mainnav ul li ul li{
+  width: 100%;
+}
+header .mainnav ul li:focus-within > ul,
+header .mainnav ul li:hover > ul{
+  display: initial;
+  background: whitesmoke;
+  background-image: url("https://cdn.pixabay.com/photo/2013/09/23/22/33/turtle-185484_1280.jpg") ;
+}
+header .mainnav ul li a:hover{
+  background-color: whitesmoke;
+  color: rgb(5, 5, 5);
+}
+footer{
+  background-color:  #86c0dd;
+  background-image: url("https://cdn.pixabay.com/photo/2013/09/23/22/33/turtle-185484_1280.jpg") ;
+  width: 100%;
+  color: black;
+  margin-top: 0.5em;
+  
+}
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  main
+  {
+    animation: fadeIn 2s ease-in-out;
+  }
+h2{
+  font-size: 1.5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 1.3em;
+  text-align: center;
+}
+p{
+  margin: 1.7em;
+  font-size: 1.1em;
+}
+img{
+  margin: 1.5em;
+  width: 95%;
+  height: 500px;
+}
+iframe{
+  height: 500px;
+  width: 95%;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 1.2em;
+  justify-content: center;
+}
+.maincont{
+  background: linear-gradient(to right, whitesmoke, #86c0dd,whitesmoke);
+  margin: 1.5em;
+}
+main
+    {
+      animation: fadeIn 2s ease-in-out;
+    }

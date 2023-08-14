@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/purchase.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+
+    <title>Purchase and Donate</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.webp" class="logo"></a>
+                <input type="checkbox" id="menu">
+                <label for="menu">Menu</label>
+                <nav class="mainnav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="turtlecat.html">Turtle Categories</a></li>
+                        <li><a href="hikaduwa.html">Hikkaduwa Turtle Hatcheries</a></li>
+                        <li><a href="threat.html">Threats to Turtles</a></li>
+                        <li><a href="kos.html">Other Turtle Hatcheries</a>
+                        <ul>
+                            <li><a href="kos.html">Kosgoda</a></li>
+                            <li><a href="bentota.html">Bentota</a></li>
+                        </ul></li>
+                        <li><a href="purshase.html">Purchase and Donate</a></li>
+                    </ul>
+                </nav>
+      </header>
+            <main>
+                <img id="img7" src="https://cdn.pixabay.com/photo/2016/11/29/02/19/animal-1866808_640.jpg" alt="Save Turtles">
+                <div class="Donation">
+                <h1>Donation</h1>
+                <p>The protection and survival of endangered turtle species depends on turtle hatcheries, which are essential conservation organizations. To ensure that the young turtles have the best chance of surviving, these hatcheries offer a secure and regulated environment for turtle eggs to hatch.
+
+                    However, these hatcheries need a lot of resources to run, such as personnel, supplies, and turtle food. Here is where your contribution can truly make a difference.
+                    
+                    You can help a crucial conservation effort to save an endangered turtle species from extinction by making a donation to a turtle hatchery. By contributing, you can help these hatcheries operate more efficiently and produce more young animals that reach adulthood.</p><br>
+                <p>Additionally, by making a donation to a turtle hatchery, you are aiding in the preservation of a significant aspect of the biodiversity on our planet. The loss of turtles would have a profound effect on the ecosystem because they are so important to it. Your contribution can actually help save and protect the lives of threatened turtles. So please think about giving today to help turtle hatcheries with their vital work. Your contribution will ensure that these amazing creatures survive for many more generations because every dollar counts.
+                </p>
+                <br>
+                                <a class="button" href="https://lankaenvironmentfund.org/">Read More</a>
+                <form id="donForm">
+                    <fieldset>
+                        <div id="field">
+                            <label for="amo">Select Donating Amount: </label>
+                            <select id="amo">
+                                <option value="100">LKR.100</option>
+                                <option value="500">LKR.500</option>
+                                <option value="1000">LKR.1000</option>
+                                <option value="2000">LKR.2000</option>
+                                <option value="5000">LKR.5000</option>
+                                <option value="10000">LKR.10000</option>
+                            </select>
+                        </div>
+                        <div id="field">
+                            <label for="nam">Name</label><br>
+                            <input id="name" name="name" type="text" required>
+                            <div id="error1"></div>
+                        </div>
+                        <div id="field">
+                            <label for="addr">Address</label><br>
+                            <input id="addr" name="Address" type="text">
+                            
+                        </div>
+                        <div id="field">
+                            <label for="carDNum">Card Number</label><br>
+                            <input id="carDNum" type="tel" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"  data-mask="0000 0000 0000 0000">
+                            <div id="error2"></div>
+                        </div>
+                        <div id="field">
+                            <label for="expDate">Expiry Date</label><br>
+                    <input id="expDate" type="month" >
+                    <div id="error3"></div>
+                </div>
+                <div id="field">
+                    <label for="CVC">CVC/CVV</label><br>
+                    <input id="CVC" type="number">
+                    <div id="error4"></div>
+                </div>
+                <div id="field">
+                    <label id="CardHolder">CardHolder Name</label><br>
+                    <input id="CardHolder" type="tel" placeholder="xxx" maxlength="3">
+                    <div id="error5"></div>
+                </div>
+                <button id="insub" type="submit">Submit Donation</button>
+
+            </fieldset>
+            </form>
+        
+
+                </div>
+<footer><nav class="navfo">
+    <ul>
+        <li><a href= "mailto= cb011060@students.apiit.lk">Contact Us</a></li>
+        <li>077 251 9299</li>
+    </ul>
+        &copy; CB011060, 2023. T&C apply
+</nav><!--References: --></footer>
+</body>
+</html>

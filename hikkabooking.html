@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hikkaduwa Booking</title>
+    <link rel="stylesheet" href="styles/hikaduwa.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.webp" class="logo"></a>
+        <input type="checkbox" id="menu">
+        <label for="menu">Menu</label>
+        <nav class="mainnav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- Other navigation links can be added here if needed -->
+            </ul>
+        </nav>
+    </header>
+    <style>
+        #menu{
+  display: none;
+}
+label{
+
+  display: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: serif;
+}
+.logo{
+  width: 5em;
+  height: 5em;
+}
+.mainnav{
+  position: relative;
+  float: right;
+}
+header{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #86c0dd, whitesmoke);
+  box-shadow: 0 5px 10px rgba(31, 8, 107, 0.1);
+  padding: 5px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  
+}
+header .mainnav ul{
+  list-style: none;
+}
+header .mainnav ul li{
+position: relative;
+float: left;
+font-family: candara;
+font-weight: bold;
+}
+header .mainnav ul li a{
+padding: 1em;
+font-size: 1em;
+color: #000;
+display: block;
+text-decoration: none;
+font-family: cursive;
+}
+.mainnav ul li ul{
+  position: absolute;
+  left: 0;
+  width: 150px;
+  display: none;
+  background: #86c0dd;
+}
+.mainnav ul li ul li{
+  width: 100%;
+}
+header .mainnav ul li:focus-within > ul,
+header .mainnav ul li:hover > ul{
+  display: initial;
+  background: whitesmoke;
+}
+header .mainnav ul li a:hover{
+  background-color: whitesmoke;
+  color: rgb(5, 5, 5);
+}
+footer{
+  background-color:  #86c0dd;
+  width: 100%;
+  color: black;
+  margin-top: 0.5em;
+  
+}
+  
+iframe{
+        width: 100%;
+
+        height:auto;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    
+    main
+    {
+      animation: fadeIn 2s ease-in-out;
+    }
+.mainimg{
+  width: 100%;
+  height: 45%;
+}
+main{
+  margin: 2em;
+  background: linear-gradient(to right, whitesmoke, #86c0dd);
+}
+main p{
+  text-align: center;
+  padding: 1em;
+  font-size: 1.1em;
+}
+main h2{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.3em;
+}
+iframe{
+  height: 500px;
+  width: 95%;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 1.2em;
+  justify-content: center;
+}
+.guests{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em;
+}
+.duration{
+    align-items: center;
+    width: 100%;
+}
+
+
+    </style>
+
+    <main>
+        <h2>Book Your Hikkaduwa Experience</h2>
+        <p>Get ready for an unforgettable adventure in Hikkaduwa. Book your trip now and enjoy the beautiful beaches, vibrant culture, and exciting activities that await you.</p>
+        </main>
+        <main>
+            <center><h2>Reservation Date</h2></center>
+             <p>
+                 <label for="date">Arrival Date: </label>
+                 <input type="date" id="date" name="arrivalDate" value="date" autofocus required>
+             </p></main>
+             <main>
+             <section class="guests">
+                 <center> <h2>Guests:</h2></center>
+                  <div>
+                    <label for="sl-adult">SL Adult:</label>
+                    <input type="number" id="sl-adult" min="0" max="10" value="0">
+                  </div>
+                  <div>
+                    <label for="sl-child">SL Child:</label>
+                    <input type="number" id="sl-child" min="0" max="10" value="0">
+                  </div>
+                  <div>
+                    <label for="foreigner-adult">Foreigner Adult:</label>
+                    <input type="number" id="foreigner-adult" min="0" max="10" value="0">
+                  </div>
+                  <div>
+                    <label for="foreigner-child">Foreigner Child:</label>
+                    <input type="number" id="foreigner-child" min="0" max="10" value="0">
+                  </div>
+                  <div>
+                    <label for="infant">Infant:</label>
+                    <input type="number" id="infant" min="0" max="10" value="0">
+                  </div>
+                </section></main>
+            
+               
+ 
+ 
+ 
+ 
+ <main>
+             <section class="duration">
+                <center><h2>Duration</h2></center>
+                 <select id="duration-dropdown">
+                   <!-- Options for time slots -->
+                   <!-- Populate these options dynamically using JavaScript -->
+                  <option value="7:00 am - 8:00 am">7:00am - 8:00am</option>
+                 <option value="8:00 am - 9:00 am">8:00am - 9:00am</option>
+         <option value="9:00 am - 10:00 am ">9:00am - 10:00am </option> 
+ 
+         
+         
+         <option value="10:00 am - 11:00 am ">10:00am - 11:00am </option>
+         
+         <option value="11:00 am - 12:00 pm ">11:00am - 12:00pm </option> 
+         
+         
+         
+         <option value="12:00pm - 1:00 pm ">12:00pm - 1:00pm </option>
+         
+         <option value="1:00pm - 2:00 pm ">1:00pm - 2:00pm </option> 
+         
+         <option value="2:00pm - 3:00pm ">2:00pm - 3:00pm </option>
+         
+         <option value="3:00pm -  4:00pm (Peak)">3:00pm -  4:00pm (Peak)</option>
+         
+        
+         
+         <option value="4:00pm -  5:00pm (Peak)">4:00pm -  5:00pm (Peak)</option> 
+         
+      
+         
+         <option value="5:00pm - 6:00pm (Peak)">5:00pm -  6:00pm (Peak)</option>        
+                 
+                 </select>
+               </section>
+               <center><button><a href="hikkadetails.html">Book Now</a></button></center>
+ 
+         </form></main>
+         
+     <form><main>
+            <div id="paymentSummary">
+                 <section class="pricing-table">
+                <center><h2>Pricing Table</h2></center>
+                 <table>
+                   <tr>
+                     <th>Category</th>
+                     <th>Charge per hour</th>
+                   </tr>
+                   <tr>
+                     <td>Foreigner Adult</td>
+                     <td>10 USD</td>
+                   </tr>
+                   <tr>
+                     <td>Foreigner Child</td>
+                     <td>5 USD</td>
+                   </tr>
+                   <tr>
+                     <td>SL Adult</td>
+                     <td>4 USD</td>
+                   </tr>
+                   <tr>
+                     <td>SL Child</td>
+                     <td>2 USD</td>
+                   </tr>
+                   <tr>
+                     <td>Infant (SL or Foreigner) (under 4 years)</td>
+                     <td>Free</td>
+                   </tr>
+                 </table>
+               </section></form></fieldset>
+                <form></main>
+                </main>
+      <form>       
+    <main>
+       
+               <div id="paymentSummary">
+                    <section class="pricing-table">
+                   <center><h2>Pricing Table</h2></center>
+                    <table>
+                      <tr>
+                        <th>Category</th>
+                        <th>Charge per hour</th>
+                      </tr>
+                      <tr>
+                        <td>Foreigner Adult</td>
+                        <td>10 USD</td>
+                      </tr>
+                      <tr>
+                        <td>Foreigner Child</td>
+                        <td>5 USD</td>
+                      </tr>
+                      <tr>
+                        <td>SL Adult</td>
+                        <td>4 USD</td>
+                      </tr>
+                      <tr>
+                        <td>SL Child</td>
+                        <td>2 USD</td>
+                      </tr>
+                      <tr>
+                        <td>Infant (SL or Foreigner) (under 4 years)</td>
+                        <td>Free</td>
+                      </tr>
+                    </table>
+                  </section></form></fieldset>
+                  <main>
+                   <form>
+                    
+                  <section class="summary-table">
+                   <center><h2>Summary Table</h2></center>
+                    <!-- Summary table to display the selected options and total payable -->
+                    <!-- You can style this table using CSS -->
+                    <table id="summary-table">
+                        <tbody>
+    
+                            <tr>
+                            
+                            <td>Date: </td>
+                            
+                            <td>null</td>
+                            
+                            </tr>
+                            
+                            <tr>
+                            
+                            <td>Time:</td>
+                            
+                            <td>12:00 pm - 1:00 pm </td>
+                            
+                            </tr>
+                            
+                            <tr>
+                            
+                            <td>Foreigner Adult:</td>
+                            
+                            <td>0</td>
+                            
+                            </tr>
+                            
+                            <tr>
+                            
+                            <td>Foreigner Child:</td>
+                            
+                            <td>1</td>
+                            
+                            </tr>
+                            
+                            <tr>
+                            
+                            <td>SL Adult:</td>
+                            
+                            <td>0</td>
+                            
+                            </tr>
+                            
+                            <tr>
+                            
+                            <td>SL Child:</td>
+                            
+                            <td>0</td>
+                            
+                            </tr>
+                            
+                            <tr>
+                            
+                            <td>Infant:</td>
+                            
+                            <td>0</td>
+                            
+                            </tr>
+                            
+                            <tr> 
+                            
+                            <td>Total Payable:</td>
+                            
+                            <td>5 USD</td>
+                            
+                            </tr>
+                            
+                            </tbody>
+                      <!-- Summary table content will be updated dynamically by JavaScript -->
+                    </table> </form></main></section>
+    
+                    <div id="confirmationForm">
+       
+                        <h2>Confirmation</h2>
+                        <br><br>
+                        <p><i style="color: white;">Thank you for your order. Your order has been confirmed with us. You can show this confirmation at the entrance. 
+                            Following is the summary of your order.</i></p>
+                        <br>
+                        </div>
+                                  </section>
+                                  </div>
+                            </fieldset>
+                                 </form>
+                                  
+                    <form id="detailsForm">
+                            <fieldset>
+                                <div class="flex-container">
+                                    <div class="details-field">
+                                        <h2><span style="font-weight: lighter;">Full name</span></h2>
+                                        <div id="details">
+                                            <label><span style="font-weight: lighter; font-size: smaller;">Same as in your ID</span></label>
+                                            <input type="text" id="fullName" name="fullName" size="16" placeholder="Full Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="details-field">
+                                        <h2><span style="font-weight: lighter;">Mobile Number</span></h2>
+                                        <div id="details">
+                                            <label><span style="font-weight: lighter; font-size: smaller;">We reach out for booking updates over SMS/Whatsapp</span></label>
+                                            <input type="tel" id="mobNum" name="mobNum" size="11" maxlength="10" placeholder="Add a valid Mobile Number" required>
+                                        </div>
+                                    </div>
+                                    <div class="details-field">
+                                        <h2><span style="font-weight: lighter;">Confirm email</span></h2>
+                                        <div id="details">
+                                            <label><span style="font-weight: lighter; font-size: smaller;">Just to ensure we got this right</span></label>
+                                            <input type="text" id="confirmEmail" name="confirmEmail" size="16" placeholder="Confirm your email ID" required>
+                                        </div>
+                                    </div>
+                                    <div class="details-field">
+                                        <h2><span style="font-weight: lighter;">Email</span></h2>
+                                        <div id="details">
+                                            <label><span style="font-weight: lighter; font-size: smaller;">We will send your tickets</span></label>
+                                            <input type="text" id="Email" name="Email" size="16" placeholder="Add a valid email ID" required>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <button type="button"  id="btnDetails">Submit</button>
+                            </fieldset>
+                        </form>
+                               
+                               <form id="paymentForm">
+                            <fieldset>
+                                <h2><span style="font-weight: lighter;">Card number</span></h2>
+                                <div id="payment">
+                                    <input type="text" id="cardNumber" name="cardNumber" size="16" placeholder="Incomplete field" required>
+                                </div>
+                    
+                                <h2><span style="font-weight: lighter;">Expiry Date</span></h2>
+                                <div id="payment">
+                                    <input type="text" id="expiryDate" name="expiryDate" size="11" maxlength="10" placeholder="Card too old" required>
+                                </div>
+                    
+                                <h2><span style="font-weight: lighter;">CVC/CVV</span></h2>
+                                <div id="payment-right">
+                                    <input type="text" id="cvcCvv" name="cvcCvv" size="16" placeholder="Incomplete field" required>
+                                </div>
+                    
+                                <h2><span style="font-weight: lighter;">Name on card</span></h2>
+                                <div id="payment">
+                                    <input type="text" id="nameOnCard" name="nameOnCard" size="16" placeholder="Name contains invalid characters" required>
+                                </div>
+                                <button type="button" id="btnPay">Pay</button>
+                            </fieldset>
+                        </form>
+                    
+                       
+                         
+                      
+                      
+                      
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                    
+                    
+                        const paymentForm = document.getElementById('paymentForm');
+                        const ticketBooking = document.getElementById('ticketBooking');
+                        const detailsForm = document.getElementById('detailsForm');
+                        const paymentSummary = document.getElementById('paymentSummary');
+                        const confirmationForm = document.getElementById('confirmationForm');
+                         
+                        paymentForm.style.display = 'none';
+                        detailsForm.style.display = 'none';
+                        confirmationForm.style.display = 'none';
+                    
+                        const durationDropdown = document.getElementById('duration-dropdown');
+                        const dateInput = document.getElementById('date');
+                        const foreignerAdultInput = document.getElementById('foreigner-adult');
+                        const foreignerChildInput = document.getElementById('foreigner-child');
+                        const slAdultInput = document.getElementById('sl-adult');
+                        const slChildInput = document.getElementById('sl-child');
+                        const infantInput = document.getElementById('infant');
+                        const summaryTable = document.getElementById('summary-table');
+                    
+                        function updateSummaryTable() {
+                            const date = dateInput.value;
+                            const duration = durationDropdown.value;
+                            const foreignerAdultCount = parseInt(foreignerAdultInput.value);
+                            const foreignerChildCount = parseInt(foreignerChildInput.value);
+                            const slAdultCount = parseInt(slAdultInput.value);
+                            const slChildCount = parseInt(slChildInput.value);
+                            const infantCount = parseInt(infantInput.value);
+                    
+                            const totalPayable = (foreignerAdultCount * 10) + (foreignerChildCount * 5) +
+                                (slAdultCount * 4) + (slChildCount * 2);
+                            
+                            localStorage.setItem("date", date);
+                            localStorage.setItem("duration", duration);
+                            localStorage.setItem("foreignerAdultCount", foreignerAdultCount);
+                            localStorage.setItem("foreignerChildCount", foreignerChildCount);
+                            localStorage.setItem("slAdultCount", slAdultCount);
+                            localStorage.setItem("slChildCount", slChildCount);
+                            localStorage.setItem("infantCount", infantCount);
+                            localStorage.setItem("totalPayable", totalPayable);
+                    
+                    
+                    
+                            const cells = summaryTable.getElementsByTagName('td');
+                            cells[1].textContent = date;
+                            cells[3].textContent = duration;
+                            cells[5].textContent = foreignerAdultCount; // Correct index for Foreigner Adult
+                            cells[7].textContent = foreignerChildCount; // Correct index for Foreigner Child
+                            cells[9].textContent = slAdultCount; // Correct index for SL Adult
+                            cells[11].textContent = slChildCount; // Correct index for SL Child
+                            cells[13].textContent = infantCount; // Correct index for Infant
+                            cells[15].textContent = `${totalPayable} USD`;
+                    
+                        }
+                    
+                        const storedDate = localStorage.getItem("date");
+                        const storedDuration = localStorage.getItem("duration");
+                        const storedForeignerAdultCount = localStorage.getItem("foreignerAdultCount");
+                        const storedForeignerChildCount = localStorage.getItem("foreignerChildCount");
+                        const storedSLAdultCount = localStorage.getItem("slAdultCount");
+                        const storedSLChildCount = localStorage.getItem("slChildCount");
+                        const storedInfantCount = localStorage.getItem("infantCount");
+                        const storedTotalPayable = localStorage.getItem("totalPayable");
+                    
+                        if (storedDate) dateInput.value = storedDate;
+                        if (storedDuration) durationDropdown.value = storedDuration;
+                        if (storedForeignerAdultCount) foreignerAdultInput.value = storedForeignerAdultCount;
+                        if (storedForeignerChildCount) foreignerChildInput.value = storedForeignerChildCount;
+                        if (storedSLAdultCount) slAdultInput.value = storedSLAdultCount;
+                        if (storedSLChildCount) slChildInput.value = storedSLChildCount;
+                        if (storedInfantCount) infantInput.value = storedInfantCount;
+                    
+                        updateSummaryTable();
+                    
+                        dateInput.addEventListener('change', updateSummaryTable);
+                        [durationDropdown, foreignerAdultInput, foreignerChildInput, slAdultInput, slChildInput, infantInput].forEach(element => {
+                            element.addEventListener('change', updateSummaryTable);
+                        });
+                    
+                        updateSummaryTable();
+                    
+                    
+                                const bookButton = document.getElementById('btnBook');
+                                bookButton.addEventListener('click', function () {
+                                  if(slAdultInput.value>0){
+                                    ticketBooking.style.display = 'none';
+                                    detailsForm.style.display = 'flex';
+                                    document.getElementById("detailsForm").focus();
+                                  }
+                                    
+                                });
+                    
+                                 const detailsButton = document.getElementById('btnDetails');
+                                detailsButton.addEventListener('click', function () {
+                                  // alert();
+                                    // payment_tble.style.display = 'display';
+                                    ticketBooking.style.display = 'none';
+                                    detailsForm.style.display = 'none';
+                                    paymentForm.style.display = 'flex';
+                                    confirmationForm.style.display = 'none';
+                                    document.getElementById("paymentForm").focus();
+                                });
+                    
+                                 const payButton = document.getElementById('btnPay');
+                                payButton.addEventListener('click', function () {
+                                  // alert();
+                                    // payment_tble.style.display = 'display';
+                                    ticketBooking.style.display = 'none';
+                                    detailsForm.style.display = 'none';
+                                    paymentForm.style.display = 'none';
+                                    confirmationForm.style.display = 'flex';
+                                    document.getElementById("confirmationForm").focus();
+                                    
+                                });
+                    
+                                
+                    
+                              
+                            });
+                        </script>
+                    </body>
+                    </html>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+    <footer>
+        <p>Contact Us: <a href="mailto=cb011060@students.apiit.lk">cb011060@students.apiit.lk</a> | Phone: 077 251 9299</p>
+        <p>&copy; CB011060, 2023. All rights reserved. Terms and Conditions apply.</p>
+    </footer>
+</body>
+</html>
